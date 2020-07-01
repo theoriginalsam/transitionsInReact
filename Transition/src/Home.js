@@ -20,7 +20,7 @@ const Home = () => {
     {id: 3, src: require('./assets/3.jpg')},
     {id: 4, src: require('./assets/4.jpg')},
     //working on transition
-    //these are the images to be .
+    //these are the images to be displayed.
   ];
   return (
     <SafeAreaView style={{flex: 1}}>
