@@ -18,14 +18,14 @@ const Detail = (props) => {
   const {data} = props.route.params;
   console.log(data);
   return (
-    <View style={styles.container}>
+    <View style={{flex: 1}}>
       <View>
         <SharedElement>
           <Image
             resizeMode="cover"
             source={{uri: data.image}}
             style={{
-              height: height - 200,
+              height: height - 300,
               width: width,
 
               borderBottomLeftRadius: 30,
@@ -43,36 +43,55 @@ const Detail = (props) => {
           </TouchableOpacity>
         </View>
 
-        <ScrollView>
+        <ScrollView
+          style={{
+            paddingHorizontal: 10,
+            paddingTop: 10,
+          }}>
           <SharedElement id={`item.${data.id}.text`}>
-            <Text>{data.title}</Text>
+            <Text style={{alignSelf: 'center', fontWeight: 'bold'}}>
+              {data.title}
+            </Text>
           </SharedElement>
-          <Text style={{textAlign: 'justify'}}>
-            Wikipedia is not a reliable source. Wikipedia can be edited by
-            anyone at any time. This means that any information it contains at
-            any particular time could be vandalism, a work in progress, or just
-            plain wrong. ... Wikipedia generally uses reliable secondary
-            sources, which vet data from primary sources.Wikipedia is not a
-            reliable source. Wikipedia can be edited by anyone at any time. This
-            means that any information it contains at any particular time could
-            be vandalism, a work in progress, or just plain wrong. ... Wikipedia
-            generally uses reliable secondary sources, which vet data from
-            primary sources.Wikipedia is not a reliable source. Wikipedia can be
-            edited by anyone at any time. This means that any information it
-            contains at any particular time could be vandalism, a work in
-            progress, or just plain wrong. ... Wikipedia generally uses reliable
-            secondary sources, which vet data from primary sources.
-          </Text>
+          <View style={{flex: 1}}>
+            <Text style={{opacity: 0.7, textAlign: 'justify'}}>
+              Wikipedia is not a reliable source. Wikipedia can be edited by
+              anyone at any time. This means that any information it contains at
+              any particular time could be vandalism, a work in progress, or
+              just plain wrong. ... Wikipedia generally uses reliable secondary
+              sources, which vet data from primary sources.Wikipedia is not a
+              reliable source. Wikipedia can be edited by anyone at any time.
+              This means that any information it contains at any particular time
+              could be vandalism, a work in progress, or just plain wrong. ...
+              Wikipedia generally uses reliable secondary sources, which vet
+              data from primary sources.Wikipedia is not a reliable source.
+              Wikipedia can be edited by anyone at any time. This means that any
+              information it contains at any particular time could be vandalism,
+              a work in progress, or just plain wrong. ... Wikipedia generally
+              uses reliable secondary sources, which vet data from primary
+              sources. Wikipedia is not a reliable source. Wikipedia can be
+              edited by anyone at any time. This means that any information it
+              contains at any particular time could be vandalism, a work in
+              progress, or just plain wrong. ... Wikipedia generally uses
+              reliable secondary sources, which vet data from primary
+              sources.Wikipedia is not a reliable source. Wikipedia can be
+              edited by anyone at any time. This means that any information it
+              contains at any particular time could be vandalism, a work in
+              progress, or just plain wrong. ... Wikipedia generally uses
+              reliable secondary sources, which vet data from primary
+              sources.Wikipedia is not a reliable source. Wikipedia can be
+              edited by anyone at any time. This means that any information it
+              contains at any particular time could be vandalism, a work in
+              progress, or just plain wrong. ... Wikipedia generally uses
+              reliable secondary sources, which vet data from primary sources.
+            </Text>
+          </View>
         </ScrollView>
       </View>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+const styles = StyleSheet.create({});
 
 export default Detail;
