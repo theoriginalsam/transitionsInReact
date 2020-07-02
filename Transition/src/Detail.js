@@ -20,7 +20,7 @@ const Detail = (props) => {
   return (
     <View style={{flex: 1}}>
       <View>
-        <SharedElement>
+        <SharedElement id={`item.${data.id}.photo`}>
           <Image
             resizeMode="cover"
             source={{uri: data.image}}
